@@ -4,7 +4,7 @@ import express, { json } from 'express';
 import helmet from 'helmet';
 import morgan from 'morgan';
 
-import pkg from '../package.json';
+// import pkg from '../package.json' assert {type: 'json'};
 
 import { createRol, createAdmin } from './libs/initialSetup.js';
 
@@ -20,7 +20,7 @@ createRol();
 createAdmin();
 
 // Settings
-app.set('pkg', pkg);
+// app.set('pkg', pkg);
 app.set('port', config.PORT);
 
 // Middlewares
@@ -34,10 +34,14 @@ app.use(express.urlencoded({ extended: false }));
 app.get('/', (req, res) => {
   res.json({
     message: 'Welcome to my API',
-    name: app.get('pkg').name,
-    version: app.get('pkg').version,
-    description: app.get('pkg').description,
-    author: app.get('pkg').author
+    name: 'Minicore-Api',
+    version: '1.0.0',
+    description: '',
+    author: 'Randy Mejia Arias'
+    // name: app.get('pkg').name,
+    // version: app.get('pkg').version,
+    // description: app.get('pkg').description,
+    // author: app.get('pkg').author
   });
 });
 
