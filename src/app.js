@@ -11,7 +11,8 @@ import { createRol, createAdmin } from './libs/initialSetup.js';
 // Importing Routes
 import userRoutes from './routes/user.routes.js';
 import authRoutes from './routes/auth.routes.js';
-
+import productRoutes from './routes/product.routes.js';
+import saleRoutes from './routes/sale.routes.js';
 
 // Initialization
 const app = express();
@@ -43,6 +44,8 @@ app.get('/', (req, res) => {
 // Routes
 app.use('/api/users', userRoutes);
 app.use('/api/auth', authRoutes);
+app.use('/api/products', productRoutes);
+app.use('/api/sales', saleRoutes);
 
 export {
   app
