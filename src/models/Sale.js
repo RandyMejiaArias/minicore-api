@@ -19,8 +19,7 @@ const saleSchema = new Schema(
       }
     ],
     date: {
-      type: Date,
-      default: new Date.now()
+      type: Date
     }
   },
   {
