@@ -4,7 +4,7 @@ import express, { json } from 'express';
 import helmet from 'helmet';
 import morgan from 'morgan';
 
-import pkg from '../package.json' assert {type: 'json'};
+import pkg from '../package.json';
 
 import { createRol, createAdmin } from './libs/initialSetup.js';
 
